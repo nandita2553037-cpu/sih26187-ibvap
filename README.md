@@ -98,7 +98,7 @@ sih26187-ibvap/
 | Backend & Risk Engine Lead | _vijai prasanna https://github.com/vijaiprasanna_ | FastAPI, Redis, risk-scoring engine |
 | Frontend & Dashboard Lead | _anitha joy https://github.com/Anitha441738_ | React dashboard, alert UI, map view |
 | Data & AI Model Evaluation Lead | _lokitha https://github.com/lokitha2553031_ | Dataset prep, annotation, precision/recall evaluation |
-| Integration, Deployment & DevOps Lead | _nandita https://github.com/nandita2553037_ | Module integration, GitHub management, end-to-end pipeline |
+| Integration, Deployment & DevOps Lead | _nandita https://github.com/nandita2553037-cpu/sih26187-ibvap.git_ | Module integration, GitHub management, end-to-end pipeline |
 
 ---
 
