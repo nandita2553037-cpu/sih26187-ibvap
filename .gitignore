@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# YOLO model weights
+*.pt
+
+# Input surveillance videos
+detection/input/*.mp4
+detection/input/*.avi
+detection/input/*.mov
+
+# Generated output videos
+detection/output/*.mp4
+detection/output/*.avi
+detection/output/*.mov
