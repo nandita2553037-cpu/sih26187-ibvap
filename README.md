@@ -93,8 +93,8 @@ sih26187-ibvap/
 
 | Role | Owner | Responsibility |
 |---|---|---|
-| Detection & Video Pipeline Lead | _varshan sai_ | RTSP ingestion, YOLOv8 detection |
-| Tracking & Zone Logic Lead | _darshni priya_ | ByteTrack/BoT-SORT, zone intrusion & loitering |
+| Detection & Video Pipeline Lead | _varshan sai https://github.com/varshansai _ | RTSP ingestion, YOLOv8 detection |
+| Tracking & Zone Logic Lead | _darshni priya https://github.com/DarshniPriya_ | ByteTrack/BoT-SORT, zone intrusion & loitering |
 | Backend & Risk Engine Lead | _vijai prasanna_ | FastAPI, Redis, risk-scoring engine |
 | Frontend & Dashboard Lead | _anitha joy_ | React dashboard, alert UI, map view |
 | Data & AI Model Evaluation Lead | _lokitha_ | Dataset prep, annotation, precision/recall evaluation |
