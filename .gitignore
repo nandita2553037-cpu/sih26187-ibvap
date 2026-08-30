@@ -1,13 +1,25 @@
+# Python cache files
+__pycache__/
+*.pyc
+.pytest_cache/
 
-# Role 2 local files
+# Virtual environment
+.venv/
+
+# YOLO model weights
+*.pt
+
+# Role 1 input surveillance videos
+detection/input/*.mp4
+detection/input/*.avi
+detection/input/*.mov
+
+# Role 1 generated output videos
+detection/output/*.mp4
+detection/output/*.avi
+detection/output/*.mov
+
+# Role 2 local videos and generated outputs
 data/*.mp4
 outputs/*.mp4
 outputs/*.jsonl
-.venv/
-__pycache__/
-.pytest_cache/
-
-
-# Local model weights
-*.pt
-
