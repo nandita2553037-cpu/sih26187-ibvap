@@ -1,0 +1,13 @@
+
+# Role 2 local files
+data/*.mp4
+outputs/*.mp4
+outputs/*.jsonl
+.venv/
+__pycache__/
+.pytest_cache/
+
+
+# Local model weights
+*.pt
+
