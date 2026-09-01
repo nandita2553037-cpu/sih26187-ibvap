@@ -23,3 +23,7 @@ detection/output/*.mov
 data/*.mp4
 outputs/*.mp4
 outputs/*.jsonl
+
+# Generated detection outputs
+detection/output/
+
