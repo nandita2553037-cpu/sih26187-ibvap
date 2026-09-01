@@ -86,7 +86,7 @@ def update_track_zone_state(
         state.intrusion_logged = False
         state.loiter_logged = False
 
-    dwell_seconds = timestamp_seconds - (state.entry_time or timestamp_seconds)
+    dwell_seconds = timestamp_seconds - (state.entry_time if state.entry_time is not None else timestamp_seconds)
     base_event = {
         "camera_id": camera_id,
         "track_id": int(track_id),
