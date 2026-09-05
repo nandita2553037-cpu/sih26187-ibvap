@@ -95,10 +95,10 @@ sih26187-ibvap/
 |---|---|---|
 | Detection & Video Pipeline Lead | _varshan sai https://github.com/varshansai _ | RTSP ingestion, YOLOv8 detection |
 | Tracking & Zone Logic Lead | _darshni priya https://github.com/DarshniPriya_ | ByteTrack/BoT-SORT, zone intrusion & loitering |
-| Backend & Risk Engine Lead | _vijai prasanna_ | FastAPI, Redis, risk-scoring engine |
-| Frontend & Dashboard Lead | _anitha joy_ | React dashboard, alert UI, map view |
-| Data & AI Model Evaluation Lead | _lokitha_ | Dataset prep, annotation, precision/recall evaluation |
-| Integration, Deployment & DevOps Lead | _nandita_ | Module integration, GitHub management, end-to-end pipeline |
+| Backend & Risk Engine Lead | _vijai prasanna https://github.com/vijaiprasanna_ | FastAPI, Redis, risk-scoring engine |
+| Frontend & Dashboard Lead | _anitha joy https://github.com/Anitha441738_ | React dashboard, alert UI, map view |
+| Data & AI Model Evaluation Lead | _lokitha https://github.com/lokitha2553031_ | Dataset prep, annotation, precision/recall evaluation |
+| Integration, Deployment & DevOps Lead | _nandita https://github.com/nandita2553037-cpu/sih26187-ibvap.git_ | Module integration, GitHub management, end-to-end pipeline |
 
 ---
 
