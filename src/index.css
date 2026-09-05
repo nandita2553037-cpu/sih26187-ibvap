@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* ─── Design Tokens ──────────────────────────────────────────────────── */
+:root {
+  /* Brand / accent */
+  --color-accent:        #00d4ff;
+  --color-accent-dim:    #0099bb;
+  --color-accent-glow:   rgba(0, 212, 255, 0.25);
+
+  /* Alert colours */
+  --color-danger:        #ff3b3b;
+  --color-warning:       #ffaa00;
+  --color-success:       #00e676;
+  --color-info:          #448aff;
+
+  /* Surface palette – dark command-center */
+  --color-bg-base:       #080c14;
+  --color-bg-surface:    #0d1422;
+  --color-bg-elevated:   #131d2e;
+  --color-bg-overlay:    #1a2640;
+  --color-bg-hover:      #1e2d45;
+
+  /* Borders */
+  --color-border:        rgba(0, 212, 255, 0.12);
+  --color-border-strong: rgba(0, 212, 255, 0.28);
+
+  /* Text */
+  --color-text-primary:  #e8f0fe;
+  --color-text-secondary:#8ba3c7;
+  --color-text-muted:    #4a6080;
+
+  /* Sidebar */
+  --sidebar-width:       240px;
+  --topbar-height:       60px;
+
+  /* Typography */
+  --font-sans:   'Inter', system-ui, sans-serif;
+  --font-mono:   'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Animations */
+  --transition-fast:     150ms ease;
+  --transition-base:     250ms ease;
+  --transition-slow:     400ms ease;
+}
+
+/* ─── Reset & Base ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-overlay);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-dim);
+}
+
+/* ─── Utility / Reusable classes ─────────────────────────────────────── */
+
+/* Glass card */
+.glass-card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.glass-card-hover {
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+.glass-card-hover:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: 0 0 20px var(--color-accent-glow);
+  transform: translateY(-1px);
+}
+
+/* Accent glow text */
+.text-accent { color: var(--color-accent); }
+.text-danger  { color: var(--color-danger); }
+.text-warning { color: var(--color-warning); }
+.text-success { color: var(--color-success); }
+
+/* Status dots */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+.status-dot.online  { background: var(--color-success); }
+.status-dot.offline { background: var(--color-danger);  animation: none; }
+.status-dot.warning { background: var(--color-warning); }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.85); }
+}
+
+/* Scan line animation for live feeds */
+@keyframes scanline {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Subtle background grid */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Alert badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 9px;
+  background: var(--color-danger);
+  color: #fff;
+}
+
+/* Glowing border on active nav item */
+.nav-item-active {
+  background: linear-gradient(90deg, rgba(0,212,255,0.15) 0%, transparent 100%);
+  border-left: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Monospace tag (timestamps, IDs) */
+.mono { font-family: var(--font-mono); font-size: 0.75rem; }
+
+/* Shimmer loading skeleton */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-elevated) 25%,
+    var(--color-bg-overlay)  50%,
+    var(--color-bg-elevated) 75%
+  );
+  background-size: 400px 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 6px;
+}
+
+/* ── Camera card — CRITICAL pulsing border ───────────────────────────── */
+@keyframes critical-border-pulse {
+  0%, 100% { border-color: rgba(255, 59, 59, 0.35); box-shadow: none; }
+  50%       { border-color: rgba(255, 59, 59, 0.8);  box-shadow: 0 0 10px rgba(255, 59, 59, 0.18); }
+}
+
+.camera-card-critical {
+  animation: critical-border-pulse 2s ease-in-out infinite;
+}
+
+/* ── Intrusion alert blink (on CCTV overlay text) ────────────────────── */
+@keyframes alert-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Radar sweep animation */
+@keyframes radar-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.radar-sweep-beam {
+  animation: radar-sweep 6s linear infinite;
+  transform-origin: 50% 50%;
+}
+
