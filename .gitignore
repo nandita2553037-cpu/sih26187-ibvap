@@ -1,0 +1,3 @@
+# Local detection files and downloaded model
+detection/
+yolov8n.pt
