@@ -1,0 +1,10 @@
+Dataset purpose: Preliminary YOLOv8 detection evaluation
+Source video: sample.mp4
+Number of source video frames: 647
+Source video resolution: 768 x 432
+Source video FPS: 12
+Number of extracted test images: 130
+Frame extraction interval: Every 5 video frames
+Current dataset type: Temporary CCTV-style sample
+Final project video available: No
+

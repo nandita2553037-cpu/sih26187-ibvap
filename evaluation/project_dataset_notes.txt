@@ -1,0 +1,12 @@
+Dataset: Project-provided team video
+Video filename: team_video.mp4
+Duration: 16.02 seconds
+Resolution: 1280 x 720
+FPS: 23.98
+Source frames: 384
+Extracted frames: <128>
+Scene: Busy urban street in daylight
+Objects: People, cars, motorcycles, bicycles, and rickshaws
+Challenges: Occlusion, crowded objects, motion blur, different object sizes
+Purpose: Preliminary Role 5 detection evaluation
+Limitation: This is not actual border-surveillance footage

@@ -1,0 +1,11 @@
+path: C:/Users/lokitha/sih26187-ibvap/evaluation/project_data
+train: images
+val: images
+
+names:
+  0: person
+  1: bicycle
+  2: car
+  3: motorcycle
+  5: bus
+  7: truck
